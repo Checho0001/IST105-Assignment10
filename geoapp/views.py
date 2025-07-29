@@ -1,13 +1,11 @@
 import requests
 import os
 import random
-from dotenv import load_dotenv
 from django.shortcuts import render
 from .forms import CountryForm
 from pymongo import MongoClient
 
-load_dotenv()
-api_key = os.getenv('OPENWEATHERMAP_API_KEY')
+api_key = ('OPENWEATHERMAP_API_KEY')
 
 client = MongoClient("mongodb://<MONGO_PRIVATE_IP>:27017/")
 db = client['assignment10']
