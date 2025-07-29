@@ -5,7 +5,7 @@ from django.shortcuts import render
 from .forms import CountryForm
 from pymongo import MongoClient
 
-api_key = ('OPENWEATHERMAP_API_KEY')
+api_key = 'OPENWEATHERMAP_API_KEY'
 
 client = MongoClient("mongodb://<MONGO_PRIVATE_IP>:27017/")
 db = client['assignment10']
