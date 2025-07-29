@@ -1,0 +1,8 @@
+<h2>Search Results</h2>
+<a href="{% url 'search_country' %}">← Return to Search Form</a>
+<ul>
+  {% for r in results %}
+    <li>{{ r.country }} ({{ r.capital }}) - {{ r.weather.temp }}°C, {{ r.weather.desc }}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'history' %}">View History</a>

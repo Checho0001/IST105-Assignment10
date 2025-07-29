@@ -1,0 +1,24 @@
+<h2>Search History</h2>
+<a href="{% url 'search_country' %}">← Return to Search Form</a>
+<br>
+<table>
+  <tr>
+    <th>Country</th>
+    <th>Capital</th>
+    <th>Population</th>
+    <th>Latitude</th>
+    <th>Temperature (°C)</th>
+    <th>Description</th>
+  </tr>
+  {% for item in history %}
+  <tr>
+    <td>{{ item.country }}</td>
+    <td>{{ item.capital }}</td>
+    <td>{{ item.population }}</td>
+    <td>{{ item.latitude }}</td>
+    <td>{{ item.weather.temp }}</td>
+    <td>{{ item.weather.desc }}</td>
+  </tr>
+  {% endfor %}
+</table>
+

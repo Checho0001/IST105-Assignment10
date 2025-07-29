@@ -1,0 +1,7 @@
+<h2>Select Continent</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Search</button>
+</form>
+<a href="{% url 'history' %}">View History</a>
